@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medisearch Chat App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="apiKeyDiv">
+    <h2>Medisearch Chat App</h2>
+    <label for="apiKey">Enter your Medisearch API key:</label>
+    <input type="text" id="apiKey" placeholder="Your API key">
+    <button id="saveApiKey">Save</button>
+    <div id="apiKeyError" class="error"></div>
+  </div>
+
+  <div id="chatDiv" style="display: none;">
+    <div class="filter-panel">
+      <h3>Filters</h3>
+      <label><input type="checkbox" id="rememberFilters"> Remember filters for this session</label>
+      <div class="filter-section">
+        <label>Publication date:</label>
+        <input type="range" id="publicationDate" min="0" max="2025" value="0">
+        <span id="dateValue">Any year</span>
+      </div>
+      <div class="filter-section">
+        <h4>Sources</h4>
+        <label><input type="checkbox" class="source" value="scientific" checked> Scientific articles</label>
+        <label><input type="checkbox" class="source" value="books"> Books</label>
+        <label><input type="checkbox" class="source" value="guidelines" checked> International health guidelines</label>
+        <label><input type="checkbox" class="source" value="medicine" checked> Medicine guidelines</label>
+        <label><input type="checkbox" class="source" value="healthline" checked> Healthline</label>
+        <button id="deselectAll">Deselect all</button>
+      </div>
+      <div id="scientificSubtypes" class="filter-section">
+        <h5>Scientific articles sub-types</h5>
+        <label><input type="checkbox" class="subtype" value="meta-analyses" checked> Meta-analyses</label>
+        <label><input type="checkbox" class="subtype" value="review" checked> Review articles</label>
+        <label><input type="checkbox" class="subtype" value="clinical" checked> Clinical trials</label>
+        <label><input type="checkbox" class="subtype" value="other" checked> Other</label>
+      </div>
+    </div>
+    <div id="chatHistory" class="chat-history"></div>
+    <div class="chat-input-section">
+      <input type="text" id="userInput" placeholder="Type your message...">
+      <button id="sendButton">Send</button>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

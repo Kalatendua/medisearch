@@ -1,0 +1,156 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333; /* Ensure text is visible on light background */
+}
+
+#apiKeyDiv, #chatDiv {
+  max-width: 800px;
+  margin: 20px auto; /* Add some margin */
+  padding: 20px;
+  background-color: #fff; /* Add background to containers */
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add subtle shadow */
+}
+
+h2, h3, h4, h5 {
+  color: #333;
+  margin-top: 0; /* Remove default top margin */
+}
+
+label {
+  display: block;
+  margin: 8px 0 4px; /* Adjust spacing */
+  font-weight: bold;
+}
+
+input[type="text"], input[type="range"] {
+  padding: 10px; /* Increase padding */
+  margin: 5px 0 10px; /* Adjust margin */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(100% - 22px); /* Account for padding and border */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #d8b5d8; /* Purple accent */
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px; /* Add rounded corners */
+  cursor: pointer;
+  margin: 10px 5px 10px 0; /* Adjust margin */
+  transition: background-color 0.2s ease; /* Smooth transition */
+}
+
+button:hover {
+  background-color: #c89cc8; /* Darker purple on hover */
+}
+
+#deselectAll {
+  background-color: #eee;
+  color: #333;
+}
+
+#deselectAll:hover {
+  background-color: #ddd;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.filter-panel {
+  background-color: #f0f0f0; /* Lighter background for filter panel */
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px; /* Rounded corners */
+  margin-bottom: 20px;
+}
+
+.filter-section {
+  margin: 15px 0; /* Increase spacing */
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee; /* Separator line */
+}
+
+.filter-section:last-child {
+  border-bottom: none; /* Remove border for last section */
+}
+
+.filter-section label {
+  font-weight: normal; /* Normal weight for checkbox labels */
+  display: inline-block; /* Allow multiple checkboxes per line */
+  margin-right: 15px;
+}
+
+#scientificSubtypes h5 {
+  margin-bottom: 5px;
+}
+
+.chat-history {
+  height: 350px; /* Increased height */
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px; /* Rounded corners */
+  padding: 15px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.chat-history div {
+  margin: 8px 0; /* Spacing between messages */
+  padding: 8px 12px; /* Padding inside messages */
+  border-radius: 6px; /* Rounded message bubbles */
+  word-wrap: break-word; /* Prevent long words from overflowing */
+}
+
+.chat-history div:nth-child(odd) { /* User messages */
+  background-color: #e1f5fe; /* Light blue background */
+  margin-left: auto; /* Align user messages to the right */
+  max-width: 70%;
+}
+
+.chat-history div:nth-child(even) { /* AI messages */
+  background-color: #f1f1f1; /* Light grey background */
+  max-width: 70%;
+}
+
+
+.chat-input-section {
+  display: flex; /* Align input and button */
+  align-items: center;
+}
+
+.chat-input-section input {
+  flex-grow: 1; /* Input takes available space */
+  margin-right: 10px; /* Space between input and button */
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+.chat-input-section button {
+  width: auto; /* Adjust button width */
+  white-space: nowrap; /* Prevent button text wrapping */
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+/* Style for range input */
+#publicationDate {
+  width: 100%;
+}
+
+#dateValue {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+}
